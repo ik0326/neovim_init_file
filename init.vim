@@ -80,10 +80,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Or build from source code by using yarn: https://yarnpkg.com
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
-"カーソル位置の情報を見る
-
-
-
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 else
@@ -226,6 +222,12 @@ autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx CocCommand prettier.formatFile
 
 
 set nohlsearch
+
+"行頭までを削除
+nnoremap dw d0
+
+"xをヤンクしない。
+nnoremap x "_x
 
 
 ""画面分割
