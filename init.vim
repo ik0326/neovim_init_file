@@ -227,8 +227,13 @@ autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx CocCommand prettier.formatFile
 
 set nohlsearch
 
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
+""画面分割
+nnoremap sv :vsplit<CR>
+nnoremap ss :split<CR>
+
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+nnoremap <Space> <C-w>w
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -248,6 +253,9 @@ set wildmenu
 
 " mouse support
 set mouse=a
+
+" copy and paste for clipboard
+set clipboard+=unnamedplus
 
 set mousemodel=popup
 set t_Co=256
