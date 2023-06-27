@@ -220,6 +220,12 @@ inoremap {<CR> {<CR>}<Esc>O
 " 自動的に保存時にフォーマットを行う
 autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx CocCommand prettier.formatFile
 
+" 全選択を行うためのキーマッピング
+nnoremap <C-a> ggVG
+
+" NERDTreeで、隠しファイルを表示
+let g:NERDTreeShowHidden=1
+
 
 set nohlsearch
 
