@@ -14,7 +14,6 @@ let g:vim_bootstrap_langs = "go,html,javascript,python,typescript"
 let g:vim_bootstrap_editor = "nvim"				" nvim or vim
 let g:vim_bootstrap_theme = "molokai"
 let g:vim_bootstrap_frams = ""
-
 if !filereadable(vimplug_exists)
   if !executable(curl_exists)
     echoerr "You have to install curl or first install vim-plug yourself!"
@@ -27,7 +26,6 @@ if !filereadable(vimplug_exists)
 
   autocmd VimEnter * PlugInstall
 endif
-
 " Required:
 call plug#begin(expand('~/.config/nvim/plugged'))
 
@@ -120,11 +118,6 @@ Plug 'mattn/emmet-vim'
 "" Javascript Bundle
 Plug 'jelera/vim-javascript-syntax'
 
-" python
-"" Python Bundle
-Plug 'davidhalter/jedi-vim'
-Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
-
 
 " typescript
 Plug 'leafgarland/typescript-vim'
@@ -211,6 +204,7 @@ let g:session_command_aliases = 1
 syntax on
 set ruler
 set number
+set relativenumber
 
 set cursorline
 set guicursor=n-v-c:block-Cursor/lCursor
